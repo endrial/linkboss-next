@@ -1,10 +1,33 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import Image from "next/image";
+import { useEffect } from "react";
 import 'remixicon/fonts/remixicon.css'
+import api from "./services/api";
 
 export default function Home() {
+
+  useEffect(() => {
+    async function loadRole() {
+    try {
+      const response = await api.get("/v1/role/list", {
+        // params: {
+        //   page: 1,
+        //   search: "KEYWORD",
+        //   size: 1000,
+        // },
+      });
+      console.log(response, response)
+    } catch (error) {
+        console.log("Error load data", error);
+      }
+    }
+    loadRole();
+  });
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Table>
