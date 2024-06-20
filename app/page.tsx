@@ -6,6 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { useEffect } from "react";
 import 'remixicon/fonts/remixicon.css'
 import api from "./services/api";
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
         //   size: 1000,
         // },
       });
-      console.log(response, response)
+      console.log(response, 'response')
     } catch (error) {
         console.log("Error load data", error);
       }
@@ -30,6 +31,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <p>TABLE TEST</p>
       <Table>
         <TableHeader>
           <TableRow className="bg-[#13CF36] disabled:hover">
@@ -64,6 +66,23 @@ export default function Home() {
           </TableRow>
         </TableBody>
       </Table>
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious href="#" />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink href="#">1</PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationEllipsis />
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationNext href="#" />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
+
     </main>
   );
 }
