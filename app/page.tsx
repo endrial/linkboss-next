@@ -30,8 +30,8 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>TABLE TEST</p>
+    <main className="flex min-h-screen flex-col">
+      <p className="mb-2 font-bold">DASHBOARD</p>
       <Table>
         <TableHeader>
           <TableRow className="bg-[#13CF36] disabled:hover">
