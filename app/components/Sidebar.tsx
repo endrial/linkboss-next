@@ -1,60 +1,77 @@
 import {
     Command,
-    CommandDialog,
-    CommandEmpty,
     CommandGroup,
-    CommandInput,
     CommandItem,
     CommandList,
     CommandSeparator,
-    CommandShortcut,
   } from '@/components/ui/command'
   import {
-    LayoutDashboard,
-    Newspaper,
-    Folders,
-    CreditCard,
-    Settings,
+    ListChecks,
+    KeyRound,
+    History,
     User,
+    Store,
+    ShoppingCart,
+    ShoppingBag,
+    Folder,
+    LayoutDashboard,
+    NotebookPen,
   } from 'lucide-react'
   import Link from 'next/link'
   
   const Sidebar = () => {
     return (
       <Command className='rounded-none bg-secondary'>
-        <CommandInput placeholder='Type a command or search...' />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading='Suggestions'>
+          <CommandGroup heading="Main">
             <CommandItem>
               <LayoutDashboard className='w-4 h-4 mr-2' />
-              <Link href='/'>Dashboard</Link>
+              <Link className='text-lg' href='/'>Dashboard</Link>
             </CommandItem>
             <CommandItem>
-              <Newspaper className='w-4 h-4 mr-2' />
-              <Link href='/posts'>Posts</Link>
-            </CommandItem>
-            <CommandItem>
-              <Folders className='w-4 h-4 mr-2' />
-              <Link href='#'>Categories</Link>
+              <NotebookPen className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/'>Guide</Link>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
-          <CommandGroup heading='Settings'>
+          <CommandGroup heading="Account">
+            <CommandItem>
+              <ListChecks className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/'>Role Management</Link>
+            </CommandItem>
             <CommandItem>
               <User className='w-4 h-4 mr-2' />
-              <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
+              <Link className='text-lg' href='/posts'>User Management</Link>
+            </CommandItem>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading='Video Call Loan'>
+            <CommandItem>
+              <KeyRound className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/'>Loan Param Rule</Link>
             </CommandItem>
             <CommandItem>
-              <CreditCard className='w-4 h-4 mr-2' />
-              <span>Billing</span>
-              <CommandShortcut>⌘B</CommandShortcut>
+              <History className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/posts'>Loan Status CRM</Link>
+            </CommandItem>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading='Erajaya KTA'>
+            <CommandItem>
+              <Store className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/'>Store Management</Link>
             </CommandItem>
             <CommandItem>
-              <Settings className='w-4 h-4 mr-2' />
-              <span>Settings</span>
-              <CommandShortcut>⌘S</CommandShortcut>
+              <ShoppingCart className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/posts'>Sales Management</Link>
+            </CommandItem>
+            <CommandItem>
+              <Folder className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/'>ACS Management</Link>
+            </CommandItem>
+            <CommandItem>
+              <ShoppingBag className='w-4 h-4 mr-2' />
+              <Link className='text-lg' href='/posts'>Purchase Order List</Link>
             </CommandItem>
           </CommandGroup>
         </CommandList>

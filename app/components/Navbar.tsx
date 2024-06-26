@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../assets/logo-lb.png'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {
   DropdownMenu,
@@ -13,7 +12,7 @@ import {
 
 const Navbar = () => {
   return (
-    <div className='bg-primary dark:bg-slate-700 py-2 px-5 flex justify-between text-white'>
+    <div className='bg-[#0253A5] py-2 px-5 flex justify-between text-white'>
       <Link href='/'>
       <div className="flex justify-center items-center">
         <Image
@@ -23,7 +22,7 @@ const Navbar = () => {
           width={40}
           height={40}
         />
-        <h3 className='ml-3'>Back Office Systems</h3>
+        <h3 className='ml-3 font-bold'>Back Office Systems</h3>
         </div>
       </Link>
 
@@ -39,6 +38,9 @@ const Navbar = () => {
           <DropdownMenuSeparator />
           <DropdownMenuItem>
             <Link href='/profile'>Profile</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href='/setting'>Setting</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link href='/auth'>Logout</Link>
