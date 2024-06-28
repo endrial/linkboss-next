@@ -37,41 +37,41 @@ import {
           <CommandGroup heading="Account">
             <CommandItem>
               <ListChecks className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/'>Role Management</Link>
+              <Link className='text-lg' href='/account/role-management'>Role Management</Link>
             </CommandItem>
             <CommandItem>
               <User className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/posts'>User Management</Link>
+              <Link className='text-lg' href='/account/user-management'>User Management</Link>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading='Video Call Loan'>
             <CommandItem>
               <KeyRound className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/'>Loan Param Rule</Link>
+              <Link className='text-lg' href='/#'>Loan Param Rule</Link>
             </CommandItem>
             <CommandItem>
               <History className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/posts'>Loan Status CRM</Link>
+              <Link className='text-lg' href='/#'>Loan Status CRM</Link>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading='Erajaya KTA'>
             <CommandItem>
               <Store className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/'>Store Management</Link>
+              <Link className='text-lg' href='/#'>Store Management</Link>
             </CommandItem>
             <CommandItem>
               <ShoppingCart className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/posts'>Sales Management</Link>
+              <Link className='text-lg' href='/#'>Sales Management</Link>
             </CommandItem>
             <CommandItem>
               <Folder className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/'>ACS Management</Link>
+              <Link className='text-lg' href='/#'>ACS Management</Link>
             </CommandItem>
             <CommandItem>
               <ShoppingBag className='w-4 h-4 mr-2' />
-              <Link className='text-lg' href='/posts'>Purchase Order List</Link>
+              <Link className='text-lg' href='/#'>Purchase Order List</Link>
             </CommandItem>
           </CommandGroup>
         </CommandList>

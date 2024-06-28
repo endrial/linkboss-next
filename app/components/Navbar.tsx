@@ -40,9 +40,6 @@ const Navbar = () => {
             <Link href='/profile'>Profile</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href='/setting'>Setting</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
             <Link href='/auth'>Logout</Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
